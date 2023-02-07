@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "cf664a84-1a1e-4129-b9d2-55565e772051",
+		"name": "ACM WEBSITE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25566034"
+	},
+	"item": [
+		{
+			"name": "Get events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/events/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"events",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Sample Event\",\r\n    \"Date\": \"2003-10-21\",\r\n    \"Title\": \"Sample Title\",\r\n    \"Description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices dictum libero, id iaculis metus. Fusce ornare enim id diam faucibus, id convallis nunc interdum. Duis id lorem dictum purus viverra scelerisque vel vel nulla. Sed venenatis augue sit amet dui tempus euismod. Nam eget accumsan magna. Duis et lorem tellus. Vestibulum sit amet dui at risus posuere mollis.\",\r\n    \"Image\": \"Sample URL\",\r\n    \"Venue\": \"Online\",\r\n    \"Duration\": \"2 HOURS\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/events/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"events",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Event",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/events/get/{{pk}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"events",
+						"get",
+						"{{pk}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
